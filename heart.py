@@ -3,18 +3,20 @@ class Heart:
         #s-template's symbol
         self.s=s
         # heart template
-        self.template=[
-            '0   0',
-            '00 00',
-            '00000',
-            ' 000 ',
-            '  0  '
+        self.template = [
+            '  ♥     ♥  ',
+            ' ♥♥♥   ♥♥♥ ',
+            '♥♥♥♥♥♥♥♥♥♥♥',
+            ' ♥♥♥♥♥♥♥♥♥ ',
+            '  ♥♥♥♥♥♥♥  ',
+            '   ♥♥♥♥♥   ',
+            '    ♥♥♥   ',
+            '     ♥    '
         ]
-
     def __generate_template(self):
        new_template=[]
        for line in self.template:
-           new_template.append(line.replace('0',self.s))
+           new_template.append(line.replace('♥',self.s))
 
        return new_template
 
