@@ -34,21 +34,16 @@ class Heart:
     def print_heart(self,x=None):
         self.checker()
 
-        if x is None:
-            for line in self.template:
-                print(line)
+        # if x is None:
+        #     for line in self.template:
+        #         print(line)
 
-        elif x>0:
-            for line in self.template:
-                for l in line:
-                    print(l*x,end='')
-                print()
+        for line in self.template:
+            for l in line:
+                print(l*x,end='')
+            print()
 
-
-        else:
-            print(f"Error! X can not be less than 1! Now X={x}")
-
-if __name__=="__main__":
+def main():
     # heart=Heart('/')
     # heart.print_heart()
     #
@@ -58,16 +53,38 @@ if __name__=="__main__":
     # heart2=Heart("\\")
     # heart2.print_heart(2)
 
-
     while True:
         inp=input("Введите символ из которого хотите себе сердечко (если хотите выйти напишите Exit): ")
         if inp=='':
             print("Вы ничего не ввели! Повторите снова!")
             continue
+
         elif inp.lower()=='exit':
             print("Вы выбрали выйти из программы. До свидания, желаю вам всего хорошего и хорошего вам дня!")
             break
+
+        elif len(inp)!=1:
+            print("Нужно ввести лишь один символ!")
+            continue
+
         else:
             heart=Heart(inp)
-            x=input("Введите значение x (строго больше нуля), это будет множителем сердечек: ")
-            heart.print_heart(int(x))
+            n_try = 1
+            while True:
+                multiplier=input("Введите значение x (строго больше нуля), это будет множителем сердечек: ")
+                if multiplier.isnumeric():
+                    if int(multiplier)>0:
+                        heart.print_heart(int(multiplier))
+                        break
+                    else:
+                        n_try+=1
+                        print(f"Ошибка! Вы ввели: {multiplier}\nМножитель сердечек строго больше нуля! Попытка: #{n_try}")
+
+                else:
+                    n_try+=1
+                    print(f"Ошибка! Вы ввели: {multiplier}\nА надо ввести число или цифру! Попытка: #{n_try}")
+
+
+
+if __name__ == "__main__":
+    main()
