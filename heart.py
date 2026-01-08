@@ -44,6 +44,15 @@ if __name__=="__main__":
     heart2=Heart("\\")
     heart2.print_heart()
 
- 
-
-    print('test print for github')
+    while True:
+        inp=input("Введите символ из которого хотите себе сердечко (если хотите выйти напишите Exit): ")
+        if inp=='':
+            print("Вы ничего не ввели! Повторите снова!")
+            continue
+        elif inp.lower()=='exit':
+            print("Вы выбрали выйти из программы. До свидания, желаю вам всего хорошего и хорошего вам дня!")
+            break
+        else:
+            heart=Heart(inp)
+            x=input("Введите значение x (строго больше нуля), это будет множителем сердечек: ")
+            heart.print_heart(int(x))
