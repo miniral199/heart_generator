@@ -13,7 +13,6 @@ class Heart:
             '    ♥♥♥   ',
             '     ♥    '
         ]
-
     def __generate_template(self):
        new_template=[]
        for line in self.template:
