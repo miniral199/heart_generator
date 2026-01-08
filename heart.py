@@ -35,11 +35,14 @@ class Heart:
             print(line)
 
 if __name__=="__main__":
-    heart=Heart('/')
-    heart.print_heart()
-
-    heart1=Heart('|')
-    heart1.print_heart()
+    # heart=Heart('/')
+    # heart.print_heart()
+    #
+    # heart1=Heart('|')
+    # heart1.print_heart()
+    #
+    # heart2=Heart("\\")
+    # heart2.print_heart(2)
 
     heart2=Heart("\\")
     heart2.print_heart()
