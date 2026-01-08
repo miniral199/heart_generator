@@ -58,8 +58,6 @@ if __name__=="__main__":
     # heart2=Heart("\\")
     # heart2.print_heart(2)
 
-    heart2=Heart("\\")
-    heart2.print_heart()
 
     while True:
         inp=input("Введите символ из которого хотите себе сердечко (если хотите выйти напишите Exit): ")
