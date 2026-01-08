@@ -17,7 +17,7 @@ class Heart:
     def __generate_template(self):
        new_template=[]
        for line in self.template:
-           new_template.append(line.replace('0',self.s))
+           new_template.append(line.replace('♥',self.s))
 
        return new_template
 
