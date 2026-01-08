@@ -26,13 +26,27 @@ class Heart:
         #     for j in range(6):
         #         line+=self.s
         #     self.template.append(line)
-                
 
-    def print_heart(self):
-        if not self.s=='0':
-            self.template=self.__generate_template()
-        for line in self.template:
-            print(line)
+    def checker(self):
+        if not self.s == '♥':
+            self.template = self.__generate_template()
+
+    def print_heart(self,x=None):
+        self.checker()
+
+        if x is None:
+            for line in self.template:
+                print(line)
+
+        elif x>0:
+            for line in self.template:
+                for l in line:
+                    print(l*x,end='')
+                print()
+
+
+        else:
+            print(f"Error! X can not be less than 1! Now X={x}")
 
 if __name__=="__main__":
     # heart=Heart('/')
