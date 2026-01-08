@@ -13,7 +13,6 @@ class Heart:
             '    ♥♥♥   ',
             '     ♥    '
         ]
-
     def __generate_template(self):
        new_template=[]
        for line in self.template:
@@ -42,6 +41,8 @@ if __name__=="__main__":
     heart1=Heart('|')
     heart1.print_heart()
 
+    heart2=Heart("\\")
+    heart2.print_heart()
 
  
      
