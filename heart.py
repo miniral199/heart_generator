@@ -27,12 +27,10 @@ class Heart:
         #         line+=self.s
         #     self.template.append(line)
 
-    def checker(self):
-        if not self.s == '♥':
-            self.template = self.__generate_template()
 
     def print_heart(self,x=None):
-        self.checker()
+        if self.s!='♥':
+            self.template = self.__generate_template()
 
         # if x is None:
         #     for line in self.template:
